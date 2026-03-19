@@ -44,3 +44,15 @@ SSL/TLS 를 사용해 암호화화여 주고 받음
 |secure|X|O|
 |data|plain|encrypted|
 |port|80|443|
+
+
+### HTTP Methods
+---
+- GET - 리소스 조회 ( URL 입력, 링크 클릭 등 )
+- POST - 새로운 리소스 생성 ( 성공적으로 생성 시 201 status )
+- PUT - 기존 리소스 수정, 없으면 새로 생성 ( 덮어쓰기 )
+- DELETE - 리소스 삭제
+- PATCH - 리소스의 일부분 수정 ( PUT 은 전체 수정 )
+- HEAD - GET 과 유사하나, body 를 제외하고 조회
+- OPTIONS - 서버 <-> 브라우저 통신을 위한 옵션 확인 ( 서버의 method, header, content-type 확인 )
+- CONNECT - 대상 자원으로 식별된 서버에 대한 연결 요청
