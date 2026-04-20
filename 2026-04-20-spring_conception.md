@@ -1,5 +1,5 @@
+# Spring 4대 개념
 ## DI (Dependency Injection)
-
 객체를 직접 생성하지 않고 **외부(IoC 컨테이너)에서 생성한 객체를 주입**받아 사용하는 방식이다.
 
 - 생성자 또는 setter를 통해 주입
@@ -18,7 +18,6 @@ private A p;
 ---
 
 ## IoC (Inversion of Control)
-
 객체의 **생성과 생명주기 관리를 개발자가 아닌 스프링(제3자)이 담당**하는 프로그래밍 모델
 
 |구분|기존 방식|스프링(IoC)|
@@ -30,7 +29,6 @@ private A p;
 - DI는 IoC를 구현하는 방식 중 하나
 
 ## PSA (Portable Service Abstraction)
-
 **특정 기술에 종속되지 않도록** 스프링이 추상화된 인터페이스를 제공하는 개념
 
 - 기술이 바뀌어도 코드 수정 최소화
@@ -44,7 +42,6 @@ private A p;
 > MySQL → Oracle, JDBC → JPA로 교체해도 비즈니스 코드는 그대로 유지
 
 ## AOP (Aspect-Oriented Programming)
-
 **핵심 비즈니스 로직과 공통 기능을 분리**해서 관리하는 프로그래밍 방식
 
 - 로그 출력, 트랜잭션 처리, 보안 체크, 예외 처리
@@ -57,7 +54,6 @@ private A p;
 - 핵심 로직에만 집중 가능
 
 ## Clean-Up
-
 - **DI** 객체 간 의존성을 외부에서 주입
 - **IoC** 객체 생성과 관리를 스프링이 담당
 - **PSA** 기술 변화에 유연한 추상화 구조 제공
