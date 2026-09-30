@@ -1,9 +1,11 @@
 # HTML to Figma
 
 **`플러그인`** : [`HTML to Figma`](https://www.figma.com/community/plugin/1687017576392405867/html-to-figma)
+
 **`소스코드`** : [`soyuo/html-to-figma`](https://github.com/soyuo/html-to-figma)
 
 Figma 플러그인은 DOM이 있는 UI(iframe) 와 Figma API가 있는 메인 스레드(sandbox) 로 나뉘어 있고, 둘은 postMessage로만 대화한다.
+
 HTML → Figma 변환은 이 경계를 어떻게 나눌지가 설계의 전체다.
 
 ## 구조도
@@ -22,6 +24,7 @@ html-to-figma/
 html 내에 javascript 를 배치하면 되지, 왜 둘이 구분되어 있을까?
 
 가장 큰 이유로는 sandbox 환경에선 Figma API (figma.*) 를 지원하기 때문이다.
+
 iframe 환경에선 DOM/getComputedStyle 및 네트워크, 파일 읽기가 가능하나 Figma API 사용이 불가하다.
 
 ## 파이프라인
@@ -43,6 +46,7 @@ Figma 캔버스 (파일마다 오른쪽 20px 간격으로 배치)
 ```
 
 로직의 가장 큰 핵심은 HTML을 직접 파싱하지 않는 것이다.
+
 브라우저가 이미 계산해 놓은 결과를 읽어서 Figma 노드로 번역하기만 하면 된다.
 
 ### 요소 → Figma 매핑
